@@ -1,15 +1,17 @@
 <script lang="ts">
-  import Hero from '$lib/components/sections/hero.svelte';
-  import About from '$lib/components/sections/about.svelte';
+  import Hero from '$lib/components/sections/Hero.svelte';
+  import About from '$lib/components/sections/About.svelte';
 </script>
 
-<section class="page">
+<main class="page">
   <Hero />
 
-  <div class="spacer"></div>
+  <section class="spacer" >
+    
+  </section>
 
   <About />
-</section>
+</main>
 
 <style>
 .page {
@@ -18,6 +20,6 @@
 }
 
 .spacer {
-  height: 20vh;
+  height: 25vh;
 }
 </style>
