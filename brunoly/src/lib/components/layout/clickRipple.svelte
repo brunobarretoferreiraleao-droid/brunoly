@@ -27,7 +27,12 @@
   border-radius: 50%;
   transform: translate(-50%, -50%);
 
-  border: 1px solid rgba(125, 220, 255, 0.6);
+  background: radial-gradient(
+    circle, 
+    rgba(125, 220, 255, 0.25),
+    transparent 70%
+  );
+  opacity: 0.8;
 
   pointer-events: none;
 
