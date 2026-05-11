@@ -7,13 +7,13 @@
   z-index: -1;
 
   background:
+    radial-gradient(
+      circle at var(--mx) var(--my),
+      rgba(125, 220, 255, 0.22),
+      transparent 40%
+    )
     radial-gradient(circle at 20% 30%, rgba(125, 220, 255, 0.22), transparent 45%),
-    radial-gradient(circle at 80% 20%, rgba(94, 234, 212, 0.18), transparent 50%),
-    radial-gradient(circle at 50% 80%, rgba(96, 165, 250, 0.16), transparent 55%);
-
-  filter: blur(70px) saturate(1.2);
-
-  animation: float 18s ease-in-out infinite;
+    radial-gradient(circle at 80% 20%, rgba(94, 234, 212, 0.18), transparent 50%),    
 }
 
 @keyframes float {

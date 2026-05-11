@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
+
   let x = 0;
   let y = 0;
 
@@ -8,16 +10,14 @@
   function move(e: MouseEvent) {
     x = e.clientX;
     y = e.clientY;
+
+    document.documentElement.style.setProperty('--mx', `${x}px`);
+    document.documentElement.style.setProperty('--my', `${y}px`);
   }
 
-  function animate() {
-    dx += (x - dx) * 0.08;
-    dy += (y - dy) * 0.08;
-
-    requestAnimationFrame(animate);
-  }
-
-  animate();
+  onMount(() => {
+    window.addEventListener('mousemove', move);
+  });
 </script>
 
 <svelte:window on:mousemove={move} />
@@ -25,9 +25,7 @@
 <div
   class="glow"
   style="transform: translate({dx}px, {dy}px)"
->
-
-</div>
+> </div>
 
 <style>
 .glow {
