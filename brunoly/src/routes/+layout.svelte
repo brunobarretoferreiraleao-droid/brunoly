@@ -10,7 +10,6 @@
 <Background />
 <MouseGlow />
 <ClickBubbles />
-
 <Navbar />
 
 {@render children?.()}
