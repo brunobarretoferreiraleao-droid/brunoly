@@ -2,6 +2,10 @@
 
 <style>
 .bg {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+
+
   position: fixed;
   inset: 0;
   z-index: -1;
