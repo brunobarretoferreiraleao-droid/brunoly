@@ -1,12 +1,16 @@
 <script lang="ts">
-	import favicon from '$lib/assets/favicon.svg';
-	import '../app.css';
+  import Background from '$lib/components/layout/background.svelte';
+  import MouseGlow from '$lib/components/layout/MouseGlow.svelte';
+  import ClickBubbles from '$lib/components/layout/ClickBubbles.svelte';
+  import Navbar from '$lib/components/layout/navbar.svelte';
 
-	let { children } = $props();
+  let { children } = $props();
 </script>
 
-<svelte:head>
-	<link rel="icon" href={favicon} />
-</svelte:head>
+<Background />
+<MouseGlow />
+<ClickBubbles />
 
-{@render children()}
+<Navbar />
+
+{@render children?.()}
