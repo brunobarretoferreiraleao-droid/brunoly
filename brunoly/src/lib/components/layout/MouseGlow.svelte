@@ -1,36 +1,58 @@
 <script lang="ts">
-  let x = $state(0);
-  let y = $state(0);
+  let x = 0;
+  let y = 0;
+
+  let dx = $state(0);
+  let dy = $state(0);
 
   function move(e: MouseEvent) {
     x = e.clientX;
     y = e.clientY;
   }
+
+  function animate() {
+    dx += (x - dx) * 0.08;
+    dy += (y - dy) * 0.08;
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
 </script>
-
-<div class="cursor-glow" style="left: {x}px; top: {y}px;">
-
-</div>
 
 <svelte:window on:mousemove={move} />
 
+<div
+  class="glow"
+  style="transform: translate({dx}px, {dy}px)"
+>
+
+</div>
+
 <style>
-.cursor-glow {
+.glow {
   position: fixed;
-  width: 300px;
-  height: 300px;
+  top: 0;
+  left: 0;
+
+  width: 420px;
+  height: 420px;
 
   transform: translate(-50%, -50%);
   pointer-events: none;
 
   background: radial-gradient(
     circle,
-    rgba(125,220,255,0.25),
+    rgba(120, 220, 255, 0.14),
     transparent 60%
   );
 
-  filter: blur(20px);
-  transition: left 0.08s ease, top 0.08s ease;
+  filter: blur(30px);
+  opacity: 0.9;
+
+  mix-blend-mode: screen;
+
+  transition: opacity 0.3s ease;
   z-index: 9999;
 }
 </style>
