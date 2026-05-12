@@ -1,32 +1,64 @@
 @import "tailwindcss";
 
+/* =========================
+   🌊 DESIGN TOKENS
+========================= */
+
 :root {
-    --bg: #07111f;
-    --bg-secondary: #0b1728;
+  /* Typography */
+  --font-ui: system-ui, -apple-system, "San Francisco", "Helvetica Neue", sans-serif;
+  --font-display: "Frutiger", "Helvetica Neue", sans-serif;
 
-    --text: #f5f7ff;
+  /* Colors */
+  --text: #f5f7ff;
 
-    --blue-sky: #7fd6ff;
-    --blue-deep: #2b6cb0;
-    --blue-glass: rgba(120, 190, 255, 0.25);
+  --blue-sky: #7fd6ff;
+  --blue-deep: #1e4f86;
 
-    --green-aero: #7ef0d6;
-    --green-soft: rgba(126, 240, 214, 0.18);
-    --green-glow: rgba(120, 255, 200, 0.25);
+  --green-glow: rgba(126, 240, 214, 0.25);
 
-    --white-light: rgba(255, 255, 255, 0.7);
-    --glass: rgba(255, 255, 255, 0.08);
-    --glass-border: rgba(255, 255, 255, 0.12);
+  /* Glass */
+  --glass: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.12);
 
-    --bg-top: #a6f0ff;
-    --bg-mid: #6fb6ff;
-    --bg-deep: #1e4f86;
+  /* Blur */
+  --blur-sm: 10px;
+  --blur-md: 20px;
+  --blur-lg: 45px;
+
+  /* Radius */
+  --r-sm: 12px;
+  --r-md: 24px;
+  --r-lg: 999px;
+
+  /* Spacing scale */
+  --s-1: 0.5rem;
+  --s-2: 1rem;
+  --s-3: 2rem;
+  --s-4: 4rem;
+  --s-5: 8rem;
 }
+
+/* =========================
+   🧠 BASE
+========================= */
 
 body {
-    cursor: none;
+  font-family: var(--font-ui);
+  color: var(--text);
+  cursor: none;
+  background: #0b1c2c;
 }
 
+/* headings usam “alma” */
+h1, h2, h3 {
+  font-family: var(--font-display);
+}
+
+/* reset leve */
 * {
-    will-change: transform;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  will-change: transform;
 }
