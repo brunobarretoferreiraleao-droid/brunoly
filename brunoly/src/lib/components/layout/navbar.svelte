@@ -35,7 +35,27 @@
     border: 1px solid var(--glass-border-soft);
 
     z-index: 1000;
+
+    overflow: hidden;
   }
+
+  .navbar::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.22),
+      transparent 40%
+    );
+
+  pointer-events: none;
+}
 
   .logo {
     font-weight: 700;
