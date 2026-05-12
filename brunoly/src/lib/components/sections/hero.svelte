@@ -32,6 +32,12 @@
 
 <section class="hero">
   <div class="content">
+    <div class="visual-core">
+      <div class="orb"></div>
+      <div class="ring ring-1"></div>
+      <div class="ring ring-2"></div>
+    </div>
+
     <h1 bind:this={title}>
       Transformando ideias<br />
       em experiências.
@@ -54,6 +60,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 h1 {
@@ -78,5 +86,104 @@ button {
   backdrop-filter: blur(20px);
 
   cursor: pointer;
+}
+
+.visual-core {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+.orb {
+  position: absolute;
+
+  width: 440px;
+  height: 440px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(circle at 30% 30%,
+      rgba(255,255,255,0.95),
+      rgba(125,220,255,0.45) 25%,
+      rgba(126,240,214,0.18) 50%,
+      transparent 72%
+    );
+
+  filter: blur(10px);
+
+  opacity: 0.95;
+
+  box-shadow:
+    0 0 120px rgba(125,220,255,0.25),
+    inset 0 0 60px rgba(255,255,255,0.18);
+
+  animation: orbFloat 10s ease-in-out infinite;
+}
+
+.ring {
+  position: absolute;
+
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.12);
+
+  backdrop-filter: blur(8px);
+}
+
+.ring-1 {
+  width: 520px;
+  height: 520px;
+
+  animation:
+    rotateSlow 18s linear infinite;
+}
+
+.ring-2 {
+  width: 620px;
+  height: 620px;
+
+  border-color: rgba(126,240,214,0.08);
+
+  animation:
+    rotateSlowReverse 24s linear infinite;
+}
+
+@keyframes orbFloat {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes rotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateSlowReverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
 }
 </style>
