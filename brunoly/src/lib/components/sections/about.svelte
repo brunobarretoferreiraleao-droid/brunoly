@@ -32,7 +32,7 @@
 .card {
   max-width: 800px;
 
-  background: var(--glass);
+  background: var(--glass-mid);
   backdrop-filter: blur(var(--blur-lg));
 
   padding: var(--s-4);

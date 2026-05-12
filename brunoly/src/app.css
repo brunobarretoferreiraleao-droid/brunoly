@@ -18,8 +18,13 @@
   --green-glow: rgba(126, 240, 214, 0.25);
 
   /* Glass */
-  --glass: rgba(255, 255, 255, 0.08);
-  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-soft: rgba(255,255,255,0.05);
+  --glass-mid: rgba(255,255,255,0.08);
+  --glass-strong: rgba(255,255,255,0.16);
+
+  --glass-border-soft: rgba(255,255,255,0.08);
+  --glass-border-mid: rgba(255,255,255,0.14);
+  --glass-border-strong: rgba(255,255,255,0.22);
 
   /* Blur */
   --blur-sm: 10px;
