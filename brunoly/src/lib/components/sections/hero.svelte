@@ -62,6 +62,7 @@ h1 {
 }
 
 p {
+  font-family: var(--font-ui);
   margin-top: 1rem;
   opacity: 0.7;
 }

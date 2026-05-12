@@ -24,7 +24,7 @@
 
 <style>
 .about {
-  padding: 10rem 2rem;
+  padding: var(--s-5) 0;
   display: flex;
   justify-content: center;
 }
@@ -32,31 +32,30 @@
 .card {
   max-width: 800px;
 
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(25px);
+  background: var(--glass);
+  backdrop-filter: blur(var(--blur-lg));
 
-  padding: 3rem;
-  border-radius: 24px;
+  padding: var(--s-4);
+  border-radius: var(--r-md);
 
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid var(--glass-border);
 }
 
 h2 {
   font-size: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--s-3);
 }
 
 .tags {
-  margin-top: 2rem;
+  margin-top: var(--s-3);
   display: flex;
-  gap: 0.5rem;
+  gap: var(--s-1);
   flex-wrap: wrap;
 }
 
 span {
   padding: 0.4rem 0.8rem;
-  border-radius: 999px;
-
+  border-radius: var(--r-lg);
   background: rgba(125,220,255,0.1);
 }
 </style>
