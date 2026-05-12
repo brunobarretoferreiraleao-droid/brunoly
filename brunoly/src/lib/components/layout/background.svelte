@@ -1,5 +1,5 @@
 <div class="bg"></div>
-
+<div class="noise"></div>
 <div class="water"></div>
 
 <style>
@@ -40,6 +40,21 @@
   mix-blend-mode: screen;
   filter: blur(45px);
   animation: drift 14s ease-in-out infinite;
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+
+  background-image: url('static/noise.avif ');
+
+  opacity: 0.035;
+
+  mix-blend-mode: soft-light;
+
+  pointer-events: none;
+
+  z-index: 999;
 }
 
 @keyframes drift {

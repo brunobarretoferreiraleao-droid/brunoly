@@ -32,6 +32,7 @@
     transparent 60%
   );
 
-  filter: blur(30px);
+  filter: blur(60px);
+  opacity: 0.55;
 }
 </style>
