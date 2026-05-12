@@ -21,7 +21,7 @@
     requestAnimationFrame(raf);
   });
 
-    let { children } = $props();
+  let { children } = $props();
 </script>
 
 <Background />
@@ -31,4 +31,18 @@
 
 <Navbar />
 
-{@render children?.()}
+<!-- 🌐 GRID GLOBAL -->
+<div class="page-grid">
+  {@render children?.()}
+</div>
+
+<style>
+.page-grid {
+  display: grid;
+  grid-template-columns: 1fr min(1100px, 92vw) 1fr;
+}
+
+.page-grid > :global(*) {
+  grid-column: 2;
+}
+</style>
