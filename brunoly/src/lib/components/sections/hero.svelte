@@ -66,7 +66,30 @@
 
 h1 {
   font-size: clamp(3rem, 7vw, 6rem);
-  line-height: 1;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.05em;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #ffffff,
+      #d9f4ff 35%,
+      #7fd6ff 90%
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+    text-shadow:
+      0 0 25px rgba(125,220,255,0.12);
+    
+    position: relative;
+
+    z-index: 3;
 }
 
 p {
