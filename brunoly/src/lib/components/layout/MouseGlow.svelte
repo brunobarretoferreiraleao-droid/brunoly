@@ -1,22 +1,29 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
-  let x = 0;
-  let y = 0;
-
-  let dx = $state(0);
-  let dy = $state(0);
+  let mouseX = $state(0);
+  let mouseY = $state(0);
 
   function move(e: MouseEvent) {
-    x = e.clientX;
-    y = e.clientY;
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  }
 
-    document.documentElement.style.setProperty('--mx', `${x}px`);
-    document.documentElement.style.setProperty('--my', `${y}px`);
+  function animate() {
+    document.documentElement.style.setProperty('--mx', `${mouseX}px`);
+    document.documentElement.style.setProperty('--my', `${mouseY}px`);
+
+    requestAnimationFrame(animate);
   }
 
   onMount(() => {
     window.addEventListener('mousemove', move);
+
+    animate();
+
+    return () => {
+      window.removeEventListener('mousemove', move);
+    };
   });
 </script>
 
@@ -24,7 +31,7 @@
 
 <div
   class="glow"
-  style="transform: translate({dx}px, {dy}px)"
+  style="transform: translate({mouseX}px, {mouseY}px)"
 > </div>
 
 <style>
