@@ -31,21 +31,17 @@
 
 <div
   class="glow"
-  style="transform: translate({mouseX}px, {mouseY}px)"
-> </div>
+  style="left: calc(var(--mx) - 210px); top: calc(var(--my) - 210px);">
+</div>
 
 <style>
 .glow {
   position: fixed;
-  top: 0;
-  left: 0;
 
   width: 420px;
   height: 420px;
 
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-
+  position: fixed;  pointer-events: none;
   background: radial-gradient(
     circle,
     rgba(120, 220, 255, 0.14),
