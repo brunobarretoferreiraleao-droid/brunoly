@@ -14,12 +14,12 @@
     radial-gradient(circle at 50% 80%, rgba(120, 190, 255, 0.25), transparent 55%),
 
     linear-gradient(to bottom,
-      #a6f0ff 0%,
-      #6fb6ff 45%,
+      #8bc9ee 0%,
+      #4f89c5 45%,
       #1e4f86 100%
     );
 
-  filter: saturate(1.2) contrast(1.05);
+  filter: saturate(0.9) contrast(1);
 }
 
 /* camada viva */

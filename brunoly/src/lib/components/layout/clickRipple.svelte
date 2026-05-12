@@ -20,6 +20,7 @@
 
 <style>
 .ripple {
+  z-index: 5000;
   position: fixed;
   width: 20px;
   height: 20px;
@@ -46,8 +47,9 @@
   }
 
   100% {
-    transform: translate(-50%, -50%) scale(12);
+    transform: translate(-50%, -50%) scale(6);
     opacity: 0;
+    backdrop-filter: blur(4px);
   }
 }
 </style>
