@@ -100,15 +100,41 @@ p {
 
 button {
   margin-top: 2rem;
+
   padding: 1rem 2rem;
 
   border-radius: 999px;
-  border: none;
 
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.16);
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.16),
+    rgba(255,255,255,0.06)
+  );
+
+  backdrop-filter: blur(24px);
+
+  color: white;
 
   cursor: pointer;
+
+  transition: 
+    transform 0.25s cubic-bezier(.2, .8, .2, 1),
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 16px 36px rgba(125,220,255,0.18),
+    inset 0 1px 1px rgba(255,255,255,0.22);
+}
+
+button:active {
+  transform: scale(0.96);
 }
 
 .visual-core {
